@@ -1,0 +1,11 @@
+%h2 Location: #{@location.zipcode}
+
+
+%h3 Latest Forecast: #{@latest_forecast.current_temp}º #{@latest_forecast.unit}
+
+%p
+  Last updated:
+  %time{ datetime: @cached_at.iso8601 }
+    = time_ago_in_words(@cached_at, include_seconds: true)
+
+= link_to "‹ Back", [:locations], class: "button"

@@ -1,0 +1,80 @@
+:root {
+  --sm-font-size: 0.7rem;
+  --lg-font-size: 1.2rem;
+  --xl-font-size: 2rem;
+
+  --accent-color: pink;
+}
+
+body {
+  margin: 1rem auto;
+  font-family: monospace-ui, monospace;
+  max-width: 40rem;
+}
+
+a, a:hover {
+  color: black;
+}
+
+.box {
+  border: 2px dotted pink;
+  padding: 1rem 1rem;
+  margin: 2rem 0;
+  box-shadow: 2px 2px 4px lightgray;
+}
+
+.notice, .alert {
+  font-size: var(--sm-font-size);
+  letter-spacing: 0.05rem;
+}
+
+.field_with_errors {
+	display: inline-block;
+}
+
+.field_with_errors input {
+  border-color: darkred !important;
+  box-shadow: 2px 2px 4px lightgray;
+}
+
+.errors {
+  font-size: var(--sm-font-size);
+  color: darkred;
+  font-weight: 700;
+}
+
+input, select, textarea {
+  border-radius: none;
+  padding: 0.15rem .25rem;
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: var(--xl-font-size);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px dashed var(--accent-color);
+}
+
+h1 a, h1 a:visited {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+h2 {
+  font-size: var(--lg-font-size);
+}
+
+.button {
+  cursor: pointer;
+  background: none;
+  border: 1px solid black;
+  padding: .25rem 1rem;
+  text-decoration: none;
+  font-size: var(--sm-font-size);
+}
+
+input:focus, select:focus, textarea:focus, .button:hover {
+  box-shadow: 2px 2px var(--accent-color);
+}

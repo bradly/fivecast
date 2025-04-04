@@ -1,0 +1,11 @@
+%h2 Add a new location
+
+= form_with model: @location do |form|
+  %ul.errors
+    - @location.errors.full_messages.each do |message|
+      %li= message
+
+  = form.label :zipcode
+  = form.text_field :zipcode
+  
+  = form.submit "Save", class: "button"

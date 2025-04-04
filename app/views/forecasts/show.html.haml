@@ -1,0 +1,7 @@
+%h2 #{@forecast.location.zipcode
+
+
+- if @location.forecasts.present?
+  %h3 Forecasts:
+  %ul
+    %li= render @location.forecasts

@@ -1,0 +1,10 @@
+%h2 New Forecast
+
+= form_with model: @forecast. tap { it.build_location } do |form|
+  = form.fields_for :location, with: Location.new do |location_fields|
+    = location_fields.label :zipcode do
+      Zipcode: #{location_fields.text_field :zipcode}
+  
+  = form.submit "Fetch"
+
+
